@@ -1,0 +1,23 @@
+/**************************************************
+
+http://undefinedblog.com
+
+**************************************************/
+html, body{
+  background-color: #fafafa;
+  color: #111;
+}
+
+a{
+  color: #0074D9;
+  text-decoration: none;
+  transition: .2s color;
+}
+
+a:hover{
+  color: #001F3F;
+}
+
+a:visited{
+  color: #7FDBFF;
+}
