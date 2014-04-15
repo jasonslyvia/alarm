@@ -1,0 +1,9 @@
+<div class="pagination">
+{{#if prev}}
+    <a class="prev" href="{{pageUrl prev}}">&larr;</a>
+{{/if}}
+<span class="page-number">{{page}} / {{pages}}</span>
+{{#if next}}
+    <a class="next" href="{{pageUrl next}}">&rarr;</a>
+{{/if}}
+</div>

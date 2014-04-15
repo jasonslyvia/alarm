@@ -1,0 +1,15 @@
+{{!< default}}
+
+<div class="error-text">{{code}}，你懂的！</div>
+<div class="trace">
+    <p><strong>{{message}}</strong></p>
+    <ul class="error-stack-list">
+        {{#foreach stack}}
+            <li>
+                at
+                {{#if function}}<em class="error-stack-function">{{function}}</em>{{/if}}
+                <span class="error-stack-file">({{at}})</span>
+            </li>
+        {{/foreach}}
+    </ul>
+</div>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{meta_title}}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{meta_description}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/normalize.css"}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
+  {{ghost_head}}
+</head>
+<body>
+  <div class="container clearfix">
+    <!-- 头部 -->
+    <div class="header">
+      <div class="logo">
+        <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      </div>
+      <ul class="nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/works/">作品</a></li>
+        <li><a href="/about/">关于</a></li>
+      </ul>
+      <form id="searchForm" class="search" method="get" action="https://www.google.com/search" target="_blank">
+        <input id="searchInput" type="text" name="q" placeholder="博客内搜索" class="search-input">
+        <input type="submit" value="Google" class="submit-btn">
+      </form>
+    </div>
+
+    <!-- 内容 -->
+    <div class="content">
+      <h4 class="site-text">{{@blog.description}}</h4>
+      {{{body}}}
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <div class="footer">
+    <p class="copyright">&copy; 2014 {{@blog.title}}</p>
+    <p class="credit">Powered by <a href="https://ghost.org">Ghost</a></p>
+    <p class="credit">Theme by <a href="https://undefinedblog.com">undefinedblog</a></p>
+  </div>
+
+  <script type="text/javascript">
+    (function(){
+      //导航菜单
+      var href = window.location.pathname.replace(/^(\/)(.*?)\/$/, '$1$2');
+      var link = document.querySelector('a[href^="' + href + '"]');
+      if (!!link) {
+        link.className += ' active';
+      }
+    })();
+
+    (function(){
+      //表单提交时自动添加site指令
+      var form = document.getElementById("searchForm");
+      form.onsubmit = function(e){
+        var text = document.getElementById("searchInput");
+        if (!text.value) {
+          return false;
+        }
+        text.value = text.value + ' site:undefinedblog.com';
+        return true;
+      };
+    })();
+
+    {{> syntaxHighlight}}
+
+    {{> ga}}
+
+  </script>
+</body>
+</html>

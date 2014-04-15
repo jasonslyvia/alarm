@@ -1,0 +1,43 @@
+
+    (function(){
+
+      //语法高亮
+      var validPres = [];
+      var _pres = document.querySelectorAll("pre");
+      for (var i = 0; i < _pres.length; i++) {
+        if(_pres[i].className.match(/^lang:/i) || _pres[i].firstChild.nodeName.toLowerCase() === "code"){
+          validPres.push(_pres[i]);
+        }
+      }
+
+      if (validPres.length !== 0) {
+          var head = document.getElementsByTagName("head")[0];
+          var style = document.createElement("link");
+          style.setAttribute("type", "text/css");
+          style.setAttribute("rel", "stylesheet");
+          style.setAttribute("href", "{{asset "css/monokai_sublime.css"}}");
+          head.appendChild(style);
+
+          var script = document.createElement("script");
+          script.setAttribute("type", "text/javascript");
+          script.setAttribute("src", "{{asset "js/highlight.pack.js"}}");
+          head.appendChild(script);
+
+          var checkHighlight = function(){
+              if (typeof hljs === "object") {
+                  for (var i = 0; i < validPres.length; i++) {
+                    var block = validPres[i];
+                    hljs.highlightBlock(block);
+                    if(block.nodeName.toLowerCase() === "code"){
+                      block = block.parentNode;
+                    }
+                    block.style.cssText += ';' + 'font-size:12px;margin:0 -20px;font-family:menlo, consolas, monospace;white-space:pre-wrap;';
+                  }
+              }
+              else{
+                  setTimeout(checkHighlight, 50);
+              }
+          }
+          checkHighlight();
+      }
+    })();
