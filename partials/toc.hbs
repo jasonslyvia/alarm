@@ -1,0 +1,40 @@
+<script type="text/javascript">
+(function(doc){
+  //extract all h2 to display table-of-content
+  if (!!doc.querySelector(".single-article") && doc.documentElement.clientWidth >= 500) {
+    var headings = doc.querySelectorAll(".single-article h2");
+    var toc = '';
+    var idPrefix = 'tocId-';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      var tClass = idPrefix + i;
+      toc += '<li><a href="javascript:;" data-target="'+ tClass +'">' + h.innerText + '</a></li>';
+      h.className += " " + tClass;
+    }
+
+    var ul = doc.createElement("ul");
+    ul.className = 'toc';
+    ul.innerHTML = toc;
+
+    doc.querySelector(".header").insertBefore(ul, doc.getElementById("searchForm"));
+  }
+
+  //when user click on one of toc item
+  ul.addEventListener("click", function(e){
+    var el = e.target;
+    var target = el.getAttribute("data-target");
+    var h = doc.querySelector('.'+target);
+    var _getOffsetTop = function(elem){
+      var box = {top: 0};
+      if (typeof elem.getBoundingClientRect !== undefined) {
+        box = elem.getBoundingClientRect();
+      }
+      return box.top + (window.pageYOffset || doc.scrollTop || 0) - (doc.clientTop || 0);
+    };
+    if (!!h) {
+      //100 is the height of site-text wrapper which block the article area
+      window.scrollTo(0, _getOffsetTop(h) - 100);
+    }
+  });
+})(document);
+</script>
