@@ -1,0 +1,31 @@
+(function(){
+  //nav
+  if (!!document.querySelector(".nav .active")) {
+    return false;
+  }
+
+  var href = window.location.pathname.replace(/^(\/)(.*?)\/$/, '$1$2');
+  var link = document.querySelector('a[href^="' + href + '"]');
+  if (!!link) {
+    var parent = link.parentNode;
+    if (!!parent) {
+      parent.className += ' active';
+    }
+  }
+  else{
+    document.querySelector(".nav li").className += ' active';
+  }
+})();
+
+(function(){
+  //search form
+  var form = document.getElementById("searchForm");
+  form.onsubmit = function(e){
+    var text = document.getElementById("searchInput");
+    if (!text.value) {
+      return false;
+    }
+    text.value = text.value + ' site:{{@blog.url}}';
+    return true;
+  };
+})();

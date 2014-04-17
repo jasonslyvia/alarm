@@ -39,8 +39,6 @@ Then customize what features you want to use.
 
 **If you want to use these features, modify it to suit your need in `themes/alarm/partials`, like changing `Google Analytics` code, `Disqus` code, etc.**
 
-Last thing you should take care about, modify `line 60` in `default.hbs`, replace ` site:undefinedblog.com` with your own blog url to make it work with Google search.
-
 Have fun!
 
 ##TODO

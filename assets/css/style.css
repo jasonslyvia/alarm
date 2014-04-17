@@ -46,8 +46,8 @@ h4, h5, h6{
 }
 
 p{
-  line-height: 2;
-  margin-bottom: 26px;
+  line-height: 1.6;
+  margin: 26px 0;
 }
 
 ul li,
@@ -75,6 +75,10 @@ blockquote{
   border-left: 4px solid #DDD;
   padding: 0 15px;
   color: #777;
+}
+
+img{
+  max-width: 100%;
 }
 
 /* Header style */

@@ -1,7 +1,6 @@
-<script type="text/javascript">
 (function(doc){
   //extract all h2 to display table-of-content
-  if (!!doc.querySelector(".single-article") && doc.documentElement.clientWidth >= 500) {
+  if (!!doc.querySelector(".single-article")) {
     var headings = doc.querySelectorAll(".single-article h2");
     var toc = '';
     var idPrefix = 'tocId-';
@@ -37,4 +36,3 @@
     }
   });
 })(document);
-</script>
