@@ -16,14 +16,7 @@
       <div class="logo">
         <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
       </div>
-      <ul class="nav">
-        <li><a href="/">博客</a></li>
-        <li><a href="/works/">作品</a></li>
-        <li><a href="/about/">关于</a></li>
-        {{#if post}}
-        <li class="active generated-nav"><a href="">内容</a></li>
-        {{/if}}
-      </ul>
+      {{> nav}}
       <form id="searchForm" class="search" method="get" action="https://www.google.com/search" target="_blank">
         <input id="searchInput" type="text" name="q" placeholder="博客内搜索" class="search-input">
         <input type="submit" value="Google" class="submit-btn">
