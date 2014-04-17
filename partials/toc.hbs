@@ -15,7 +15,7 @@
     ul.className = 'toc';
     ul.innerHTML = toc;
 
-    doc.querySelector(".header").insertBefore(ul, doc.getElementById("searchForm"));
+    doc.querySelector(".header").appendChild(ul);
   }
 
   //when user click on one of toc item

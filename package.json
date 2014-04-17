@@ -23,6 +23,7 @@
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-concat": "*",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-clean": "~0.5.0"
   }
 }

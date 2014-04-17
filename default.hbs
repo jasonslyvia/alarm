@@ -11,26 +11,28 @@
 </head>
 <body>
   <div class="container clearfix">
-    <!-- 头部 -->
+    <!-- header -->
     <div class="header">
       <div class="logo">
         <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
       </div>
       {{> nav}}
-      <form id="searchForm" class="search" method="get" action="https://www.google.com/search" target="_blank">
-        <input id="searchInput" type="text" name="q" placeholder="博客内搜索" class="search-input">
-        <input type="submit" value="Google" class="submit-btn">
-      </form>
     </div>
 
-    <!-- 内容 -->
+    <!-- content -->
     <div class="content">
-      <h4 class="site-text">{{@blog.description}}</h4>
+      <div class="sub-header">
+        <h4 class="site-text">{{@blog.description}}</h4>
+        <form id="searchForm" class="search" method="get" action="https://www.google.com/search" target="_blank">
+          <input id="searchInput" type="text" name="q" placeholder="Search inside the blog" class="search-input">
+          <input type="submit" value="Google" class="submit-btn">
+        </form>
+      </div>
       {{{body}}}
     </div>
   </div>
 
-  <!-- 页尾 -->
+  <!-- footer -->
   <div class="footer">
     <p class="copyright">&copy; 2014 {{@blog.title}}</p>
     <p class="credit">Powered by <a href="https://ghost.org">Ghost</a></p>
