@@ -3,16 +3,15 @@ alarm
 
 A Ghost theme, super fast & lightweight & minimal(no external framework, less than 20KB for whole page).
 
-[Live Demo](http://undefinedblog.com)
+[Live Demo](http://undefinedblog.com/introducing-the-simple-fast-powerful-ghost-theme-alarm/)
 
 ##Preview
 
 ###Desktop
-![Ghost theme alarm](http://ww1.sinaimg.cn/mw690/831e9385gw1efhumwo8zbj20vc0jhq6b.jpg)
-![Ghost theme alarm](http://ww2.sinaimg.cn/mw690/831e9385gw1efhumxwlfsj20u50jbgoq.jpg)
+![Ghost theme alarm](https://github.com/jasonslyvia/alarm/raw/master/screenshot/desktop.png)
 
 ###Mobile
-![Ghost alarm](http://ww2.sinaimg.cn/mw690/831e9385gw1efhumxlxq6j20an0ixq4b.jpg)
+![Ghost theme alarm](https://github.com/jasonslyvia/alarm/raw/master/screenshot/mobile.png)
 
 ##Features
 
