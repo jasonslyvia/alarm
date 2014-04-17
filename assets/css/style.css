@@ -63,12 +63,31 @@ ol li{
   clear: both;
 }
 
-p > code{
-  margin: 0;
-  border: 1px solid #ddd;
-  background-color: #f8f8f8;
+code{
+  margin: 0 2px;
+  border: 1px solid #bbb;
+  background-color: #ddd;
   border-radius: 3px;
   padding: 0;
+}
+
+code:before,
+code:after{
+  content: "\00a0";
+  letter-spacing: -0.2em;
+}
+
+pre code{
+  margin: auto;
+  border: none;
+  background-color: inherit;
+  border-radius: 0;
+}
+
+pre code:before,
+pre code:after{
+  content: '';
+  display: none;
 }
 
 blockquote{
