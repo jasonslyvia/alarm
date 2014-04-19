@@ -24,6 +24,8 @@
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-text-replace": "~0.3.11"
   }
 }

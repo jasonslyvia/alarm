@@ -1,0 +1,35 @@
+(function(){
+  var href = window.location.pathname.replace(/^(\/)(.*?)\/$/, '$1$2');
+  var link = document.querySelector('a[href^="' + href + '"]');
+  //match one of our nav item
+  if (!!link) {
+    var parent = link.parentNode;
+    if (!!parent) {
+      parent.className += ' active';
+    }
+  }
+  //content page, generate one item for nav
+  else if(document.querySelector('.single-article')){
+    var li = document.createElement("li");
+    li.innerHTML = "<a href='javascript:;'>ALARM_NAV_CONTENT</a>";
+    li.className = 'active generated-nav';
+    document.querySelector(".nav").appendChild(li);
+  }
+  //highlight first nav item, aka the index page
+  else{
+    document.querySelector(".nav li").className += ' active';
+  }
+})();
+
+(function(){
+  //search form
+  var form = document.getElementById("searchForm");
+  form.onsubmit = function(e){
+    var text = document.getElementById("searchInput");
+    if (!text.value) {
+      return false;
+    }
+    text.value = text.value + ' site:{{@blog.url}}';
+    return true;
+  };
+})();

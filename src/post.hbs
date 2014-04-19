@@ -1,0 +1,12 @@
+{{!< default}}
+
+{{#post}}
+<div class="article single-article {{post_class}}">
+  <h1>{{title}}</h1>
+  <span class="date">ALARM_PUBLISH_ON{{date format="ALARM_DATE_FORMAT"}}</span><span class="tag">{{tags prefix="ALARM_TAGS"}}</span>
+  <div class="detail">{{content}}</div>
+</div>
+{{/post}}
+
+ALARM_TOC_ENABLE
+ALARM_DISQUS_ENABLE

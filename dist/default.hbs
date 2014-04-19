@@ -16,7 +16,7 @@
       <div class="logo">
         <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
       </div>
-      {{> nav}}
+      <ul class="nav"><li><a href="/">首页</a><li><a href="/works/">作品</a><li><a href="/about/">关于</a></ul>
     </div>
 
     <!-- content -->
@@ -24,7 +24,7 @@
       <div class="sub-header">
         <h4 class="site-text">{{@blog.description}}</h4>
         <form id="searchForm" class="search" method="get" action="https://www.google.com/search" target="_blank">
-          <input id="searchInput" type="text" name="q" placeholder="Search inside the blog" class="search-input">
+          <input id="searchInput" type="text" name="q" placeholder="博客内搜索" class="search-input">
           <input type="submit" value="Google" class="submit-btn">
         </form>
       </div>
@@ -42,9 +42,9 @@
   <script type="text/javascript">
     {{> common}}
 
-    {{> syntaxHighlight}}
-
     {{> ga}}
+
+    {{> syntaxHighlight}}
   </script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+[
+  {
+    "from": "ALARM_SEARCH_PLACEHOLDER",
+    "to": "博客内搜索"
+  },
+  {
+    "from": "ALARM_PUBLISH_ON",
+    "to": "发表于："
+  },
+  {
+    "from": "ALARM_TAGS",
+    "to": "标签："
+  },
+  {
+    "from": "ALARM_DATE_FORMAT",
+    "to": "YY/MM/DD"
+  },
+  {
+    "from": "ALARM_ERROR_TEXT",
+    "to": "{{code}}，你懂的！"
+  }
+]

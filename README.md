@@ -3,6 +3,8 @@ alarm
 
 A Ghost theme, super fast & lightweight & minimal(no external framework, less than 20KB for whole page).
 
+**NOW IT'S COMPLETELY CUSTOMIZABLE!! Check it out!**
+
 [Live Demo](http://undefinedblog.com/introducing-the-simple-fast-powerful-ghost-theme-alarm/)
 
 ##Preview
@@ -24,19 +26,67 @@ A Ghost theme, super fast & lightweight & minimal(no external framework, less th
  - Syntax highlighting included(optional)
  - Table of content included(optional)
  - Legacy browser support(IE 8, note `syntax highlight` and `table of content` might not work)
+ - **Customizable with Grunt, define your own nav menu and what features you want**
 
 ##It's amazing, I want it!
 
-First thing first, download this repo as a `.zip` file and extract it to your `Ghost` directory `/content/themes/alarm`.
+First thing first, get a copy of this repo to your computer by clicking the `Download ZIP` button on the right or run `git clone https://github.com/jasonslyvia/alarm.git` command.
 
-Then customize what features you want to use.
+###Configuration
 
- - No syntax highlighting? Remove `{{> syntaxHighlight}}` in `default.hbs`
- - No Disqus comment? Remove `{{> comment}}` in `post.hbs`
- - No Google Analytics? Remove `{{> ga}}` in `default.hbs`
- - No table of contents? Remove `{{> toc}}` in `default.hbs`
+Then customize what features you want to use. Open `Gruntfile.js` with your favourite editor. Pay attention to the `alarm` part. All settings are commented so just modifiy them to suit your need.
 
-**If you want to use these features, modify it to suit your need in `themes/alarm/partials`, like changing `Google Analytics` code, `Disqus` code, etc.**
+```json
+...
+grunt.initConfig({
+    alarm: {
+      //make sure i18n/your_locale.json exists
+      locale: 'zh_CN',
+
+      //set the nav menu as desired
+      nav: [{
+        url: '/',
+        title: '首页'
+      },{
+        url: '/works/',
+        title: '作品'
+      },{
+        url: '/about/',
+        title: '关于'
+      }],
+
+      //there is a automatically generated nav item when user viewing
+      //single article or static page, config it's title
+      navContentTitle: '内容',
+
+      disqus: {
+        enable: true,
+        shortname: 'undefinedblog'  //http://undefinedblog.disqus.com should be your admin panel
+      },
+
+      googleAnalytics: {
+        enable: true,
+        id: 'UA-23908110-8'
+      },
+
+      syntaxHighlight: {
+        enable: true
+      },
+
+      tableOfContent: {
+        enable: true
+      }
+    }
+...
+```
+
+###Build the theme
+
+If you don't have `node` or `npm` installed, get them at [node](http://nodejs.org). Then inside the `alarm` directory, run `npm install`, then run `grunt dist`.
+
+Finally, the `dist` directory contained in `alarm` is your final ready-to-use theme, copy `dist` to your Ghost directory `/path-to-ghost/content/themes`, then rename it to `alarm`.
+
+Restart your Ghost process and switch your theme to `alarm`.
 
 Have fun!
 
@@ -44,4 +94,4 @@ Have fun!
 
  - [x] better css for `code`, `pre`, `footer` etc
  - [x] better input style in mobile platform
- - [ ] i18n support
+ - [x] i18n support

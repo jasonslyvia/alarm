@@ -1,0 +1,22 @@
+[
+  {
+    "from": "ALARM_SEARCH_PLACEHOLDER",
+    "to": "Search inside the blog"
+  },
+  {
+    "from": "ALARM_PUBLISH_ON",
+    "to": "Published on "
+  },
+  {
+    "from": "ALARM_TAGS",
+    "to": "Tags: "
+  },
+  {
+    "from": "ALARM_DATE_FORMAT",
+    "to": "MMMM D, YYYY"
+  },
+  {
+    "from": "ALARM_ERROR_TEXT",
+    "to": "Sorry, {{code}} error!"
+  }
+]

@@ -1,3 +1,153 @@
+/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.css .hljs-rules,
+.css .hljs-value,
+.css .hljs-function
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #f8f8f2;
+}
+
+.hljs-strongemphasis,
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.hljs-number,
+.hljs-regexp,
+.alias .hljs-keyword,
+.hljs-literal,
+.hljs-hexcolor {
+  color: #ae81ff;
+}
+
+.hljs-tag .hljs-value,
+.hljs-code,
+.hljs-title,
+.css .hljs-class,
+.hljs-class .hljs-title:last-child {
+  color: #a6e22e;
+}
+
+.hljs-link_url {
+  font-size: 80%;
+}
+
+.hljs-strong,
+.hljs-strongemphasis {
+  font-weight: bold;
+}
+
+.hljs-emphasis,
+.hljs-strongemphasis,
+.hljs-class .hljs-title:last-child {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-function,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special,
+.hljs-header,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-tag .hljs-title,
+.hljs-value,
+.alias .hljs-keyword:first-child,
+.css .hljs-tag,
+.css .unit,
+.css .hljs-important {
+  color: #F92672;
+}
+
+.hljs-function .hljs-keyword,
+.hljs-class .hljs-keyword:first-child,
+.hljs-constant,
+.css .hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-variable,
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.css .hljs-id,
+.hljs-subst,
+.haskell .hljs-type,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.hljs-link_label,
+.hljs-link_url {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-javadoc,
+.java .hljs-annotation,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715e;
+}
+/*
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata,
+.xml .php,
+.php .xml {
+  opacity: 0.5;
+}*/
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
 /**
@@ -526,6 +676,16 @@ img{
   max-width: 100%;
 }
 
+::-moz-selection{
+  background: #0074D9;
+  color: #fff;
+}
+
+::selection{
+  background: #0074D9;
+  color: #fff;
+}
+
 /* Header style */
 .header{
   position: fixed;
@@ -551,8 +711,6 @@ img{
 .header .logo h1 a{
   color: #111;
 }
-
-
 
 .header .nav{
   margin: 0;
@@ -594,7 +752,7 @@ img{
 
 .site-text{
   margin: 0;
-  padding: 27px 0 35px 2%;
+  padding: 27px 0 35px 20px;
   font-weight: 300;
   font-family: 'Helvetica Neue';
   border-left: 1px #ddd solid;
@@ -620,6 +778,7 @@ img{
   outline: none;
   line-height: 150%;
   width: 170px;
+  -webkit-transition: .3s all;
   transition: .3s all;
 }
 
@@ -644,6 +803,7 @@ img{
 
 /* Content area */
 .content{
+  overflow: hidden;
   margin-left: 25%;
   width: 75%;
   margin-top: 80px;
@@ -654,6 +814,11 @@ img{
   border-bottom: 1px #ddd solid;
   padding-top: 1px;
   margin-top: -1px;
+}
+
+/* better word count control for Chinese characters */
+.content .single-article .detail{
+  max-width: 700px;
 }
 
 .content h2 a{
@@ -851,9 +1016,10 @@ screen and (max-width: 499px) {
   }
 
   .header .nav li{
-    width: 33.33%;
+    width: 33.3333%;
     float: left;
     border-bottom: 1px #ddd solid;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 

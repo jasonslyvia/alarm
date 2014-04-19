@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{#if post}}{{meta_title}} - {{@blog.title}}{{else}}{{@blog.title}} - {{@blog.description}}{{/if}}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{meta_description}}">
+  <link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
+  {{ghost_head}}
+</head>
+<body>
+  <div class="container clearfix">
+    <!-- header -->
+    <div class="header">
+      <div class="logo">
+        <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      </div>
+      ALARM_NAV_HTML
+    </div>
+
+    <!-- content -->
+    <div class="content">
+      <div class="sub-header">
+        <h4 class="site-text">{{@blog.description}}</h4>
+        <form id="searchForm" class="search" method="get" action="https://www.google.com/search" target="_blank">
+          <input id="searchInput" type="text" name="q" placeholder="ALARM_SEARCH_PLACEHOLDER" class="search-input">
+          <input type="submit" value="Google" class="submit-btn">
+        </form>
+      </div>
+      {{{body}}}
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <p class="copyright">&copy; 2014 {{@blog.title}}</p>
+    <p class="credit">Powered by <a href="https://ghost.org">Ghost</a></p>
+    <p class="credit">Theme by <a href="https://undefinedblog.com">undefinedblog</a></p>
+  </div>
+
+  <script type="text/javascript">
+    {{> common}}
+
+    ALARM_GA_ENABLE
+
+    ALARM_SH_ENABLE
+  </script>
+</body>
+</html>
