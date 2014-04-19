@@ -11,12 +11,6 @@
 
     if (validPres.length !== 0) {
         var head = document.getElementsByTagName("head")[0];
-        var style = document.createElement("link");
-        style.setAttribute("type", "text/css");
-        style.setAttribute("rel", "stylesheet");
-        style.setAttribute("href", "{{asset "css/monokai_sublime.css"}}");
-        head.appendChild(style);
-
         var script = document.createElement("script");
         script.setAttribute("type", "text/javascript");
         script.setAttribute("src", "{{asset "js/highlight.pack.js"}}");

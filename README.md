@@ -36,7 +36,7 @@ First thing first, get a copy of this repo to your computer by clicking the `Dow
 
 Then customize what features you want to use. Open `Gruntfile.js` with your favourite editor. Pay attention to the `alarm` part. All settings are commented so just modifiy them to suit your need.
 
-```json
+```javascript
 ...
 grunt.initConfig({
     alarm: {
@@ -82,7 +82,7 @@ grunt.initConfig({
 
 ###Build the theme
 
-If you don't have `node` or `npm` installed, get them at [node](http://nodejs.org). Then inside the `alarm` directory, run `npm install`, then run `grunt dist`.
+If you don't have `node` and `npm` installed, get them at [nodejs.org](http://nodejs.org). Then inside the `alarm` directory, run `npm install`, then run `grunt dist`.
 
 Finally, the `dist` directory contained in `alarm` is your final ready-to-use theme, copy `dist` to your Ghost directory `/path-to-ghost/content/themes`, then rename it to `alarm`.
 
