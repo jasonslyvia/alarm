@@ -5,7 +5,7 @@ A Ghost theme, super fast & lightweight & minimal(no external framework, less th
 
 **NOW IT'S COMPLETELY CUSTOMIZABLE!! Check it out!**
 
-[Live Demo](http://undefinedblog.com/introducing-the-simple-fast-powerful-ghost-theme-alarm/)
+[Live Demo](http://114.215.195.28/introducing-the-simple-fast-powerful-ghost-theme-alarm/)
 
 ##Preview
 
