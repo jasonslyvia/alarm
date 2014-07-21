@@ -8,7 +8,7 @@
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
       var tClass = idPrefix + i;
-      toc += '<li><a href="javascript:;" data-target="'+ tClass +'">' + h.innerText + '</a></li>';
+      toc += '<li><a href="javascript:;" data-target="'+ tClass +'">' + h.textContent + '</a></li>';
       h.className += " " + tClass;
     }
 
