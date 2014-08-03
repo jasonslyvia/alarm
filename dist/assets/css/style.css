@@ -241,7 +241,7 @@ img{
 /* Content area */
 .content{
   overflow: hidden;
-  margin-left: 80%;
+  margin-left: 20%;
   width: 80%;
   margin-top: 80px;
 }
