@@ -11,27 +11,27 @@ module.exports = function(grunt){
           //set the nav menu as desired
           nav: [{
             url: '/',
-            title: '首页'
+            title: 'Home'
           },{
             url: '/works/',
-            title: '作品'
+            title: 'Works'
           },{
             url: '/about/',
-            title: '关于'
+            title: 'About Me'
           }],
 
           //there is a automatically generated nav item when user viewing
           //single article or static page, config it's title
-          navContentTitle: '内容',
+          navContentTitle: 'Content',
 
           disqus: {
             enable: true,
-            shortname: 'undefinedblog'  //http://undefinedblog.disqus.com should be vaild
+            shortname: 'your_disqus_id_here'  //http://xxx.disqus.com should be vaild
           },
 
           googleAnalytics: {
             enable: true,
-            id: 'UA-23908110-8'
+            id: 'your_GA_id_here'
           },
 
           syntaxHighlight: {

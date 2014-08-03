@@ -8,8 +8,13 @@ http://undefinedblog.com
 html, body{
   background-color: #fafafa;
   color: #111;
-  font: 16px/1 "Helvetica Neue",Helvetica,"Lucida Grande","Luxi Sans",Arial,"Hiragino Sans GB",STHeiti,"Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei Mono",LiGothicMed;
+  font: 16px/1 "Helvetica Neue",Helvetica,"Lucida Grande","Luxi Sans",Arial;
   height: 100%;
+}
+
+p{
+  font-weight: normal;
+  font-family: "Hiragino Sans GB", "SimSun", sans-serif;
 }
 
 a{
@@ -28,6 +33,9 @@ a:hover{
   color: #001F3F;
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-family: "Hiragino Sans GB" ,"Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei Mono",LiGothicMed;
+}
 
 h1{
   font-size: 32px;
@@ -64,6 +72,7 @@ ol li{
 }
 
 code{
+  display: inline-block;
   margin: 0 2px;
   border: 1px solid #bbb;
   background-color: #ddd;
@@ -115,7 +124,7 @@ img{
   position: fixed;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 20%;
   height: 100%;
   border-right: 1px #ddd solid;
 }
@@ -155,13 +164,14 @@ img{
   display: block;
   width: 100%;
   height: 100%;
-  letter-spacing: 5px;
+  font-family: "Hiragino Sans GB","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei Mono",LiGothicMed;
 }
 
 .header .nav .active{
   border-top: 1px #ddd solid;
   border-bottom: 1px #ddd solid;
   border-right: 1px #fafafa solid;
+  font-weight: 600;
   -webkit-animation: bigShow .2s;
   animation: bigShow .2s;
 }
@@ -169,7 +179,7 @@ img{
 .sub-header{
   position: fixed;
   top: 0;
-  width: 75%;
+  width: 80%;
   height: 80px;
   border-bottom: 1px #ddd solid;
 }
@@ -194,14 +204,15 @@ img{
 }
 
 .sub-header .search-input{
+  float: left;
+  box-sizing: border-box;
   background: none;
-  padding: 4px 0 4px 10px;
-  margin: 0 -4px 0 0;
+  margin: 0 -5px 0 0;
+  height: 34px;
+  width: 170px;
   border: 1px #ddd solid;
   border-right: none;
   outline: none;
-  line-height: 150%;
-  width: 170px;
   -webkit-transition: .3s all;
   transition: .3s all;
 }
@@ -213,7 +224,9 @@ img{
 }
 
 .sub-header .submit-btn{
-  padding: 8px;
+  float: left;
+  box-sizing: border-box;
+  height: 34px;
   background: #FF4136;
   color: #fff;
   border: none;
@@ -228,8 +241,8 @@ img{
 /* Content area */
 .content{
   overflow: hidden;
-  margin-left: 25%;
-  width: 75%;
+  margin-left: 80%;
+  width: 80%;
   margin-top: 80px;
 }
 
@@ -242,7 +255,7 @@ img{
 
 /* better word count control for Chinese characters */
 .content .single-article .detail{
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .content h2 a{
@@ -262,7 +275,7 @@ img{
   bottom: 0;
   left: 0;
   text-align: center;
-  width: 25%;
+  width: 20%;
 }
 .footer p{
   font-size: 12px;
