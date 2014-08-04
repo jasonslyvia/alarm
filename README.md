@@ -46,27 +46,27 @@ grunt.initConfig({
       //set the nav menu as desired
       nav: [{
         url: '/',
-        title: '首页'
+        title: 'Blog'
       },{
         url: '/works/',
-        title: '作品'
+        title: 'Works'
       },{
         url: '/about/',
-        title: '关于'
+        title: 'About'
       }],
 
       //there is a automatically generated nav item when user viewing
       //single article or static page, config it's title
-      navContentTitle: '内容',
+      navContentTitle: 'Content',
 
       disqus: {
         enable: true,
-        shortname: 'undefinedblog'  //http://undefinedblog.disqus.com should be your admin panel
+        shortname: 'your_disqus_id_here'  //http://your_disqus_id_here.disqus.com should be your admin panel
       },
 
       googleAnalytics: {
         enable: true,
-        id: 'UA-23908110-8'
+        id: 'your_GA_id_here'
       },
 
       syntaxHighlight: {
