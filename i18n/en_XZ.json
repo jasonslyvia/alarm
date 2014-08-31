@@ -5,7 +5,7 @@
   },
   {
     "from": "ALARM_PUBLISH_ON",
-    "to": "Published on "
+    "to": "Published: "
   },
   {
     "from": "ALARM_TAGS",
@@ -13,7 +13,7 @@
   },
   {
     "from": "ALARM_DATE_FORMAT",
-    "to": "MMMM D, YYYY"
+    "to": "YYYY-MM-DD HH:MM"
   },
   {
     "from": "ALARM_ERROR_TEXT",
