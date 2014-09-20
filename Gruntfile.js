@@ -25,12 +25,12 @@ module.exports = function(grunt){
           navContentTitle: 'Content',
 
           disqus: {
-            enable: true,
+            enable: false,
             shortname: 'your_disqus_id_here'  //http://xxx.disqus.com should be vaild
           },
 
           googleAnalytics: {
-            enable: true,
+            enable: false,
             id: 'your_GA_id_here'
           },
 
