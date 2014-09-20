@@ -33,3 +33,13 @@
     return true;
   };
 })();
+
+(function(){
+  //add target="_blank" for external links
+  var host = window.location.hostname;
+  [].slice.call(document.getElementsByTagName("a")).forEach(function(tag){
+    if(tag.href.indexOf(host) === -1){
+      tag.setAttribute("target", "_blank");
+    }
+  });
+})();

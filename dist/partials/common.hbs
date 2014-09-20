@@ -11,7 +11,7 @@
   //content page, generate one item for nav
   else if(document.querySelector('.single-article')){
     var li = document.createElement("li");
-    li.innerHTML = "<a href='javascript:;'>内容</a>";
+    li.innerHTML = "<a href='javascript:;'>Content</a>";
     li.className = 'active generated-nav';
     document.querySelector(".nav").appendChild(li);
   }
@@ -32,4 +32,14 @@
     text.value = text.value + ' site:{{@blog.url}}';
     return true;
   };
+})();
+
+(function(){
+  //add target="_blank" for external links
+  var host = window.location.hostname;
+  [].slice.call(document.getElementsByTagName("a")).forEach(function(tag){
+    if(tag.href.indexOf(host) === -1){
+      tag.setAttribute("target", "_blank");
+    }
+  });
 })();
