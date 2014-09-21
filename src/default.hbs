@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" type="text/css" href="{{asset "css/main.min.css"}}">
   {{ghost_head}}
+  <script src="//localhost:35729/livereload.js"></script>
 </head>
 <body>
   <div class="container clearfix">
@@ -20,15 +21,13 @@
       ALARM_NAV_HTML
     </div>
 
+    <!-- subheader -->
+    <div class="sub-header">
+      <h4 class="site-text">{{@blog.description}}</h4>
+    </div>
+
     <!-- content -->
     <div class="content">
-      <div class="sub-header">
-        <h4 class="site-text">{{@blog.description}}</h4>
-        <form id="searchForm" class="search" method="get" action="https://www.google.com/search" target="_blank">
-          <input id="searchInput" type="text" name="q" placeholder="ALARM_SEARCH_PLACEHOLDER" class="search-input">
-          <input type="submit" value="Google" class="submit-btn">
-        </form>
-      </div>
       {{{body}}}
     </div>
   </div>

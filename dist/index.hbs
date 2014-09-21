@@ -1,11 +1,13 @@
 {{!< default}}
-
+<div class="articles">
 {{#foreach posts}}
+<div class="article-wrapper">
 <div class="article {{post_class}}">
   <h2><a href="{{url}}">{{title}}</a></h2>
-  <span class="date">发表于：{{date format="YY/MM/DD"}}</span><span class="tag">{{tags prefix="标签："}}</span>
+  <span class="date">发表于：{{date format="YYYY-MM-DD"}}</span><span class="tag">{{tags prefix="标签："}}</span>
   <p class="summary">{{excerpt characters="100"}}[...]</p>
 </div>
+</div>
 {{/foreach}}
-
+</div>
 {{pagination}}

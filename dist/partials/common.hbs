@@ -22,19 +22,6 @@
 })();
 
 (function(){
-  //search form
-  var form = document.getElementById("searchForm");
-  form.onsubmit = function(e){
-    var text = document.getElementById("searchInput");
-    if (!text.value) {
-      return false;
-    }
-    text.value = text.value + ' site:{{@blog.url}}';
-    return true;
-  };
-})();
-
-(function(){
   //add target="_blank" for external links
   var host = window.location.hostname;
   [].slice.call(document.getElementsByTagName("a")).forEach(function(tag){

@@ -13,7 +13,7 @@
   },
   {
     "from": "ALARM_DATE_FORMAT",
-    "to": "YY/MM/DD"
+    "to": "YYYY-MM-DD"
   },
   {
     "from": "ALARM_ERROR_TEXT",

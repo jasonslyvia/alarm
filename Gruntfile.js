@@ -67,15 +67,6 @@ module.exports = function(grunt){
           }
         },
 
-        watch: {
-          build: {
-            files: ['*.html' ,'css/*.css', 'js/*.js'],
-            options: {
-              livereload: true,
-            }
-          }
-        },
-
         cssmin: {
           dist: {
             files: {
@@ -87,6 +78,16 @@ module.exports = function(grunt){
         clean:{
           dist:{
             src: 'dist'
+          }
+        },
+
+        watch: {
+          style: {
+            files: ['src/assets/**/*', 'src/*.hbs', 'src/partials/*.hbs'],
+            tasks: ['dist'],
+            options: {
+              livereload: true
+            }
           }
         }
     });
@@ -219,6 +220,5 @@ module.exports = function(grunt){
 
       grunt.log.oklns("Now enjoy your new Ghost theme --- Alarm");
       grunt.log.writeln("copy dist directory to Ghost/content/themes and rename it to alarm, then restart Ghost to make it take effect.");
-
     });
 };

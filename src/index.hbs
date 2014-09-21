@@ -1,11 +1,13 @@
 {{!< default}}
-
+<div class="articles">
 {{#foreach posts}}
+<div class="article-wrapper">
 <div class="article {{post_class}}">
   <h2><a href="{{url}}">{{title}}</a></h2>
   <span class="date">ALARM_PUBLISH_ON{{date format="ALARM_DATE_FORMAT"}}</span><span class="tag">{{tags prefix="ALARM_TAGS"}}</span>
   <p class="summary">{{excerpt characters="100"}}[...]</p>
 </div>
+</div>
 {{/foreach}}
-
+</div>
 {{pagination}}
