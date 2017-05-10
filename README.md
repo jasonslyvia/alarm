@@ -7,15 +7,15 @@ A Ghost theme, super fast & lightweight & minimal(no external framework, less th
 
 [Live Demo](http://undefinedblog.com/introducing-the-simple-fast-powerful-ghost-theme-alarm/)
 
-##Preview
+## Preview
 
-###Desktop
+### Desktop
 ![Ghost theme alarm](https://github.com/jasonslyvia/alarm/raw/master/screenshot/desktop.png)
 
-###Mobile
+### Mobile
 ![Ghost theme alarm](https://github.com/jasonslyvia/alarm/raw/master/screenshot/mobile.png)
 
-##Features
+## Features
 
  - Super fast, less than 20KB, loaded in less than 1 sec
  - Lightweight, no flat design, no realism design, just a blog
@@ -80,7 +80,7 @@ grunt.initConfig({
 ...
 ```
 
-###Build the theme
+### Build the theme
 
 If you don't have `node` and `npm` installed, get them at [nodejs.org](http://nodejs.org). Then inside the `alarm` directory, run `npm install`, then run `grunt dist`.
 
@@ -90,7 +90,7 @@ Restart your Ghost process and switch your theme to `alarm`.
 
 Have fun!
 
-##TODO
+## TODO
 
  - [x] better css for `code`, `pre`, `footer` etc
  - [x] better input style in mobile platform
