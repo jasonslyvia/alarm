@@ -28,11 +28,11 @@ A Ghost theme, super fast & lightweight & minimal(no external framework, less th
  - Legacy browser support(IE 8, note `syntax highlight` and `table of content` might not work)
  - **Customizable with Grunt, define your own nav menu and what features you want**
 
-##It's amazing, I want it!
+## It's amazing, I want it!
 
 First thing first, get a copy of this repo to your computer by clicking the `Download ZIP` button on the right or run `git clone https://github.com/jasonslyvia/alarm.git` command.
 
-###Configuration
+### Configuration
 
 Then customize what features you want to use. Open `Gruntfile.js` with your favourite editor. Pay attention to the `alarm` part. All settings are commented so just modifiy them to suit your need.
 
